@@ -5,8 +5,11 @@ import 'package:crypto/crypto.dart';
 import 'package:pixer/src/hook/targets.dart';
 import 'package:pixer/src/hook/version.dart';
 
-Uri downloadUri(String target) =>
-    Uri.parse('https://github.com/hawkkiller/pixer/releases/download/$version/$target');
+const assetRepository = 'hyshu/pixer';
+
+Uri downloadUri(String target) => Uri.parse(
+  'https://github.com/$assetRepository/releases/download/$version/$target',
+);
 
 final _httpClient = HttpClient();
 
@@ -40,10 +43,18 @@ Future<File> downloadAsset({
   }
 }
 
-String createTargetName(OS targetOS, Architecture targetArchitecture, IOSSdk? iOSSdk) {
+String createTargetName(
+  OS targetOS,
+  Architecture targetArchitecture,
+  IOSSdk? iOSSdk,
+) {
   final buffer = StringBuffer('pixer_');
 
-  final supportedTarget = getNameForTarget(targetOS, targetArchitecture, iOSSdk);
+  final supportedTarget = getNameForTarget(
+    targetOS,
+    targetArchitecture,
+    iOSSdk,
+  );
   buffer.write(supportedTarget);
   return buffer.toString();
 }

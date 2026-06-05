@@ -2,9 +2,9 @@
 //    dart tool/generate_asset_hashes.dart
 
 const assetHashes = <String, String>{
-  'libpixer_android_arm64.so': 'df0de2926cb06642781e6e58916593c1',
-  'libpixer_android_armv7.so': '883de25d35ebcb4f9245aa6b687ecfa7',
-  'libpixer_android_x86_64.so': 'aec539068ef1e8c7c7f9079d30671dca',
+  'libpixer_android_arm64.so': '1fc3925fbaf4707264cf8ace19a85d7b',
+  'libpixer_android_armv7.so': '61ff9fc639b80ba94cfbea73366b9476',
+  'libpixer_android_x86_64.so': 'e0703ac4fee927e6f45e56bb1a893a9c',
   'libpixer_ios_arm64.dylib': 'ecee4aca3d402593b1487fb85be82f6b',
   'libpixer_ios_sim_arm64.dylib': '1c45a5b54fcc00e931011179f804038d',
   'libpixer_ios_sim_x86_64.dylib': '952e89edf03a35660ced22496cf47a30',
